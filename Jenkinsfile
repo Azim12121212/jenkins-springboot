@@ -4,7 +4,7 @@ node {
   }
   stage('SonarQube Analysis') {
     def mvn = tool 'maven';
-    withSonarQubeEnv() {
+    withSonarQubeEnv('sonar') {
       sh "${mvn}/bin/mvn clean verify sonar:sonar -Dsonar.projectKey=jenkins-springboot -Dsonar.projectName='jenkins-springboot'"
     }
   }
