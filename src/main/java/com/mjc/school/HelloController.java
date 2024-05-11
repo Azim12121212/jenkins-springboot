@@ -1,4 +1,4 @@
-package com.mjc.school.jenkinsspringboot;
+package com.mjc.school;
 
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;

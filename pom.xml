@@ -11,6 +11,7 @@
 	<groupId>com.mjc.school</groupId>
 	<artifactId>jenkins-springboot</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
+	<packaging>war</packaging>
 	<name>jenkins-springboot</name>
 	<description>Module #1. Task #1. CI/CD task</description>
 	<properties>

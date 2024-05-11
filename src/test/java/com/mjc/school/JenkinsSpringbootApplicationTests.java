@@ -1,4 +1,4 @@
-package com.mjc.school.jenkinsspringboot;
+package com.mjc.school;
 
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
