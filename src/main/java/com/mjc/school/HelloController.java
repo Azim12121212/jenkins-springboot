@@ -6,6 +6,11 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class HelloController {
 
+    @GetMapping
+    public String getHomePage() {
+        return "*** THIS IS HOME PAGE! ***";
+    }
+
     @GetMapping(value = "/hello")
     public String greet() {
         return "Hello Page!";

@@ -20,7 +20,9 @@ class JenkinsSpringbootApplicationTests {
 	}
 
 	@Test
-	void contextLoads() {
+	public void testHomePageMessage() {
+		String message = helloController.getHomePage();
+		Assertions.assertNotNull(message);
 	}
 
 }
