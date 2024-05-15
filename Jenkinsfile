@@ -6,37 +6,31 @@ pipeline {
 	}
 
     stages {
-        stage('Stage 1 - Checkout Source Code') {
-			steps {
-			    // Get the source code form GitHub
-                git 'https://github.com/Azim12121212/jenkins-springboot'
-			}
-		}
-        stage('Stage 2 - Build App') {
+        stage('Stage 1 - Build App') {
 			steps {
 				// Build the Maven App
                 bat "mvn clean package"
 			}
 		}
-        stage('Stage 3 - Run Tests') {
+        stage('Stage 2 - Run Tests') {
             steps {
                 bat 'mvn jacoco:report'
             }
         }
-        stage('Stage 4 - SonarQube Analysis') {
+        stage('Stage 3 - SonarQube Analysis') {
             steps {
                 withSonarQubeEnv(installationName: 'Sonarqube', credentialsId: 'sonar-token') {
                     bat 'mvn sonar:sonar'
                 }
             }
         }
-        stage("Stage 5 - SonarQube Quality Gate") {
+        stage("Stage 4 - SonarQube Quality Gate") {
             steps {
                 // something wrong with "waitForQualityGate"
                 echo 'Quality Gate stage'
             }
         }
-        stage('Stage 6 - Deploy to Tomcat') {
+        stage('Stage 5 - Deploy to Tomcat') {
             steps {
                 bat 'mvn clean install'
                 bat 'dir /s /b *.war'
