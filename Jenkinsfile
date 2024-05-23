@@ -27,7 +27,10 @@ pipeline {
         stage("Stage 4 - SonarQube Quality Gate") {
             steps {
                 // something wrong with "waitForQualityGate"
-                echo 'Quality Gate stage'
+                //echo 'Quality Gate stage'
+                timeout(time: 1, unit: 'MINUTES') {
+                    waitForQualityGate abortPipeline: true
+                }
             }
         }
         stage('Stage 5 - Deploy to Tomcat') {
