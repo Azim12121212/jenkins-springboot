@@ -8,18 +8,15 @@ import org.springframework.boot.web.servlet.support.SpringBootServletInitializer
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 
-@Configuration
-@ComponentScan
-@EnableAutoConfiguration
 @SpringBootApplication
-public class JenkinsSpringbootApplication extends SpringBootServletInitializer {
+public class JenkinsSpringbootApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(JenkinsSpringbootApplication.class, args);
 	}
 
-	@Override
-	protected SpringApplicationBuilder configure(SpringApplicationBuilder builder) {
-		return builder.sources(JenkinsSpringbootApplication.class);
-	}
+//	@Override
+//	protected SpringApplicationBuilder configure(SpringApplicationBuilder builder) {
+//		return builder.sources(JenkinsSpringbootApplication.class);
+//	}
 }

@@ -34,7 +34,7 @@ pipeline {
             steps {
                 bat 'mvn clean install'
                 bat 'dir /s /b *.war'
-                deploy adapters: [tomcat9(credentialsId: 'tomcat_username_password', path: '', url: 'http://localhost:9999')],
+                deploy adapters: [tomcat10(credentialsId: 'tomcat_username_password', path: '', url: 'http://localhost:8080')],
                 contextPath: null, war: '**/*.war'
             }
         }
