@@ -16,9 +16,6 @@
 	<description>Module #1. Task #1. CI/CD task</description>
 	<properties>
 		<java.version>17</java.version>
-<!--		<tomcat.version>9.0.85</tomcat.version>-->
-<!--		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>-->
-<!--		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>-->
 	</properties>
 	<dependencies>
 		<dependency>

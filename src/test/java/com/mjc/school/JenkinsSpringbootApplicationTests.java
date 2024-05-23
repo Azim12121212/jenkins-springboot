@@ -25,4 +25,9 @@ class JenkinsSpringbootApplicationTests {
 		Assertions.assertNotNull(message);
 	}
 
+	@Test
+	public void testMain() {
+		JenkinsSpringbootApplication.main(new String[] {});
+	}
+
 }
